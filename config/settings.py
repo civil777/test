@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homes.apps.HomesConfig',
     'users.apps.UsersConfig',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Seoul'
-
 USE_I18N = True
 
 USE_L10N = True
