@@ -1,18 +1,451 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" />
+    <link rel="image_src" href="{% static 'image/1.jpg' %}" />
+    <meta name="description" content="홈페이지 테스트용 입니다." />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="{% static 'assets/img/apple-icon.png' %}"
+    />
+     <link
+      rel="stylesheet"
+      href="{% static 'css/styles.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+    <title>배관관리 전문기업 ~의 홈페이지 입니다. 테스트 중입니다.</title>
+  </head>
+  <header>
+<nav class="bg-indigo-300 shadow fixed max-w-screen-md z-10 mx-auto inset-x-0 bottom-0 flex justify-between items-center">
+
+        <a href="#" class="font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500">
+            <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path fill="#fff" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+            </svg>
+          1544-1209
+        </a>
+      <a href="#foo" class="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center right-0 mr-2">
+          <span class="mx-auto">견적문의</span>
+        </a>
 
 
-<form action="" method="post">
+    </nav>
+  </header>
+  <body class="text-gray-800 antialiased">
+    <nav
+      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        >
+          <a
+            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
+            href="#"
+            >EPICCA</a
+          ><button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class="text-white fas fa-bars"></i>
+          </button>
+        </div>
+        <div
+          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+          id="example-collapse-navbar"
+        >
+          <ul class="flex flex-col lg:flex-row list-none mr-auto">
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
+                ></i>
+                로그인 메뉴 아직 고민중...</a
+              >
+            </li>
+          </ul>
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block ">회사소개</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">운영관리</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">사업영역</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">현장사례</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <button
+                class="bg-white lg:hidden text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                type="button"
+                style="transition: all 0.15s ease 0s;"
+              >
+                <i class="fas fa-arrow-alt-circle-down"></i> 추가메뉴2
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
 
-	{% csrf_token %}
-	{{form.as_p}}
-	<input type="submit" value="Add" class "btn">
-</form>
-</body>
+
+      <section class="pb-20 relative block bg-gray-900">
+        <div
+          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+          style="height: 80px; transform: translateZ(0px);"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-900 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold text-white">고객센터 / 견적문의</h2>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                이름, 연락처와 함께 문의 내용을 보내주시면 친절히 답변해 드립니다.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-12 justify-center">
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <i class="fas fa-medal text-xl"></i>
+              </div>
+              <h6 class="text-xl mt-5 font-semibold text-white">
+                친절한 서비스
+              </h6>
+              <p class="mt-2 mb-4 text-gray-500">
+                다수의 현장사례를 통한 숙련 전문가의 점검
+              </p>
+            </div>
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <i class="fas fa-poll text-xl"></i>
+              </div>
+              <h5 class="text-xl mt-5 font-semibold text-white">
+                중장기 배관 관리를 통한 우수한 고객만족도
+              </h5>
+              <p class="mt-2 mb-4 text-gray-500">
+                철저한 관리로 우수한 고객만족도 성취
+              </p>
+            </div>
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <i class="fas fa-lightbulb text-xl"></i>
+              </div>
+              <h5 class="text-xl mt-5 font-semibold text-white">신기술 적용 및 A/S </h5>
+              <p class="mt-2 mb-4 text-gray-500">
+                디스펜서 신기술 업그레이드 및 계약 감사 사은품 증정
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative block py-24 lg:pt-0 bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+            <div class="w-full lg:w-6/12 px-4">
+              <div
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
+              >
+                <div class="flex-auto p-5 lg:p-10" id="foo">
+                  <h4 class="text-2xl font-semibold">문의하기 테스트중입니다 </h4>
+                  <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+
+                  </p>
+                  <div class="relative w-full mb-3 mt-8">
+
+                    <form action="/add/" method="post">
+                    {% csrf_token %}
+
+                    <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="이름"
+                      >이름</label
+                    ><input id="이름"
+                            name="이름"
+                      type="text"
+                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder="이름"
+                      style="transition: all 0.15s ease 0s;"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                  <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="전화번호"
+                      >전화번호</label
+                    ><input id="전화번호"
+                            name="전화번호"
+                      type="text"
+                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder="전화번호"
+                      style="transition: all 0.15s ease 0s;"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="주소"
+                      >주소</label
+                    ><input
+                          id="주소"
+                          name="주소"
+                      type="text"
+                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder="주소"
+                      style="transition: all 0.15s ease 0s;"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="문의사항"
+                      >문의사항</label
+                    ><textarea id="문의사항" name="문의사항"
+                      rows="4"
+                      cols="80"
+                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder=""
+                    ></textarea>
+                  </div>
+                  <div class="text-center mt-6">
+                    <input
+                      class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                      type="submit"
+                      value="문의하기"
+                      style="transition: all 0.15s ease 0s;"
+                    >
+
+                    </input>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0px);"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">소셜 미디어 공유하기!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-gray-700">
+              다른 소셜 미디어를 통해 문의하셔도 됩니다!
+            </h5>
+            <div class="mt-6">
+              <button
+                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-twitter"></i></button
+              ><button
+                class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-facebook-square"></i></button
+              ><button
+                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-dribbble"></i></button
+              ><button
+                class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-github"></i>
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >오시는 길</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >대표자명 : 김동철</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >주소 : 강원도 ....</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >이용약관</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >전화번호 010-000-0000</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2020 by
+              <a
+                href="https://www.creative-tim.com"
+                class="text-gray-600 hover:text-gray-900"
+                ></a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
 </html>
-
