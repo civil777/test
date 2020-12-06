@@ -28,6 +28,7 @@
     <title>배관관리 전문기업 ~의 홈페이지 입니다. 테스트 중입니다.</title>
   </head>
   <header>
+
 <nav class="bg-indigo-300 shadow fixed max-w-screen-md z-10 mx-auto inset-x-0 bottom-0 flex justify-between items-center">
 
         <a href="#" class="font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500">
@@ -47,147 +48,10 @@
   </header>
   <body class="text-gray-800 antialiased">
   {% include "partials/messages.html" %}
-    <nav
-      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
-    >
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-      >
-        <div
-          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
-        >
-          <a
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
-            href="#"
-            >EPICCA</a
-          ><button
-            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-            type="button"
-            onclick="toggleNavbar('example-collapse-navbar')"
-          >
-            <i class="text-white fas fa-bars"></i>
-          </button>
-        </div>
-        <div
-          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
-          id="example-collapse-navbar"
-        >
-          <ul class="flex flex-col lg:flex-row list-none mr-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="/add/"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
-                ></i>
-                견적 문의하기 1544-1209</a
-              >
-            </li>
-          </ul>
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block ">회사소개</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">운영관리</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">사업영역</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">현장사례</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <button
-                class="bg-white lg:hidden text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-                type="button"
-                style="transition: all 0.15s ease 0s;"
-              >
-                <i class="fas fa-arrow-alt-circle-down"></i> 추가메뉴2
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <div
-        class="relative pt-16 pb-32 flex content-center items-center justify-center"
-        style="min-height: 75vh;"
-      >
-        <div
-          class="absolute top-0 w-full h-full bg-center bg-auto "
-          style='background-image: url("{% static 'image/1.jpg' %}");'
-        >
-          <span
-            id="blackOverlay"
-            class="w-full h-full absolute opacity-25 bg-black"
-          ></span>
-        </div>
 
-        <div class="container relative mx-auto">
-          <div class="items-center flex flex-wrap">
-            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div class="pr-12">
-                <h1 class="text-white font-semibold text-5xl">
-                  배관관리 전문기업 EPICCA
-                </h1>
-                <p class="mt-4 text-lg text-gray-300">
-                  정확하고 신속한 진단과 철저한 관리로 고객님께 최선을 다하겠습니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-          style="height: 70px; transform: translateZ(0px);"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-300 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-      </div>
-      <section class="pb-20 bg-gray-300 -mt-24">
+    <main>
+      {% include "partials/ex_header.html" %}
+      <section class="pb-20 bg-gray-300 pt-4">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
             <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">

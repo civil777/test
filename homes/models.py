@@ -10,7 +10,8 @@ class Question(core_models.TimeStampedModel):
     주소 = models.CharField(max_length=50, blank=True, default="")
     문의사항 = models.TextField(blank=True, default="")
 
-
+    class Meta:
+        verbose_name = '문의사항'
 
 class Index(models.Model):
     text = models.TextField(default="")
