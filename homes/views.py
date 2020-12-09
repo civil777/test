@@ -1,13 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.views import generic
-from . models import Question, Index
+from . models import Question, Index, Test
 from django.urls import reverse_lazy
 from . forms import NameForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 
 
+class TestView(generic.ListView):
+    model = Test
+    template_name = 'test_list.html'
+    context_object_name = 'text'
 
 class IndexView(generic.ListView):
     model = Index

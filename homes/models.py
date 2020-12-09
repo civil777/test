@@ -14,3 +14,6 @@ class Question(core_models.TimeStampedModel):
 
 class Index(models.Model):
     text = models.TextField(default="")
+
+class Test(models.Model):
+    text = models.TextField(default="")
