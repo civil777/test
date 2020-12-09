@@ -16,7 +16,7 @@ class TestView(generic.ListView):
 
 class IndexView(generic.ListView):
     model = Index
-    template_name = 'index_list.html'
+    template_name = 'index_list.backhtml'
     context_object_name = 'text'
 
 class QuestionView(SuccessMessageMixin, generic.edit.CreateView):
