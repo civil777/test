@@ -1,19 +1,779 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" />
+    <link rel="image_src" href="{% static 'image/1.jpg' %}" />
+    <meta name="description" content="배관관리 전문기업 82clena의 홈페이지 입니다." />
     <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="{% static 'assets/img/apple-icon.png' %}"
+    />
+     <link
       rel="stylesheet"
       href="{% static 'css/styles.css' %}"
     />
-    <title>Title</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/a_styles.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+    <title>배관관리 전문기업 82clean의 홈페이지 입니다.</title>
+  </head>
+  <header>
+<nav class="bg-indigo-300 shadow fixed max-w-screen-md z-10 mx-auto inset-x-0 bottom-0 flex justify-between items-center rounded">
+
+        <a href="/add/" class="font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
+		1544-1209
+        </a>
+      <a href="/add/" class="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center right-0 mr-2">
+          <span class="mx-auto">견적문의</span>
+        </a>
+
+
+    </nav>
+  </header>
+  <body class=" antialiased">
+  {% include "partials/messages.html" %}
+    <nav
+      class="top-0 fixed z-50 w-full bg-white shadow-xl flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-center"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        >
+          <a
+            class="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase "
+	    href="{% url 'homes:index' %}"
+            >82clean</a
+          ><button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class=" fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="w-2/3">
+        <div
+          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden "
+          id="example-collapse-navbar"
+        >
+
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto ">
+            <li class="flex items-center">
+              <a
+                class=" lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class=" fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block ">회사소개</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">운영관리</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">사업영역</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">현장사례</span></a
+              >
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 50%;
+      top: 20px;
+
+
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+
 </head>
+
 <body>
+  <div class="swiper-container w-full h-full m-auto">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide h-full bg-auto text-center text-white" style='background-image: url("{% static 'image/1.jpg' %}");'>배관관리 전문기업 82clean</div>
+			<div class="swiper-slide bg-cover text-center text-white" style='background-image: url("{% static 'image/9.jpg' %}");'>Slide 2</div>
+			<div class="swiper-slide text-center text-white" style='background-image: url("{% static 'image/11.jpg' %}");'>Slide 3</div>
+
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+		<!-- Add Arrows -->
+
+	</div>
 
 
 
-{% include "partials/pizza.html" %}
-</body>
+
+
+
+
+
+
+    <main>
+
+
+
+      <div class="text-4xl sm:text-5xl text-center my-10">82clean</div>
+
+      <div class="p-24 flex flex-wrap items-center justify-center">
+
+    <div class="flex-shrink-0 m-6 bg-contain relative overflow-hidden bg-auto rounded-lg max-w-xs shadow-lg hover:bg-gray-400" style="width : 300px; height:300px; cursor: pointer; background-image: url('{% static 'image/lo1.png' %}');" onclick="location.href='#%}';">
+      <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+      </svg>
+      <div class="relative pt-10 px-10 flex items-center justify-center">
+
+        <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+
+
+
+      </div>
+
+    </div>
+    <div class="flex-shrink-0 m-6 relative bg-contain rounded-lg max-w-xs shadow-lg hover:bg-gray-400 bg-no-repeat" style="width : 300px; height:300px; cursor: pointer; background-image: url('{% static 'image/lo2.gif' %}');" onclick="location.href='#';">
+
+
+    </div>
+    <div class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg hover:bg-gray-400 bg-contain" style="width : 300px; height:300px; cursor: pointer; background-image: url('{% static 'image/lo3.png' %}');" onclick="location.href='#';">
+      <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+      </svg>
+      <div class="relative pt-10 px-10 flex items-center justify-center">
+        <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="p-16">
+    <div class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 m-5 mb-10">
+
+
+            <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+        <div class="m-2 text-justify text-sm">
+            <p class="text-right text-xs">May 17, 2020</p>
+            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+        <div class="w-full text-right mt-4">
+          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
+        </div>
+    </div>
+          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+        <div class="m-2 text-justify text-sm">
+            <p class="text-right text-xs">May 17, 2020</p>
+            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+        <div class="w-full text-right mt-4">
+          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
+        </div>
+    </div>
+          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+        <div class="m-2 text-justify text-sm">
+            <p class="text-right text-xs">May 17, 2020</p>
+            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+        <div class="w-full text-right mt-4">
+          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
+        </div>
+    </div>
+          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+        <div class="m-2 text-justify text-sm">
+            <p class="text-right text-xs">May 17, 2020</p>
+            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+        <div class="w-full text-right mt-4">
+          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
+        </div>
+    </div>
+          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+        <div class="m-2 text-justify text-sm">
+            <p class="text-right text-xs">May 17, 2020</p>
+            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+        <div class="w-full text-right mt-4">
+          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
+        </div>
+    </div>
+          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
+        <div class="m-2 text-justify text-sm">
+            <p class="text-right text-xs">May 17, 2020</p>
+            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
+            <p class="text-xs">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+        <div class="w-full text-right mt-4">
+          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+
+
+      <section class="">
+
+          <div class="flex flex-wrap items-center mt-32">
+            <div class="w-1/2 md:w-5/12 px-4 ml-auto">
+              <div
+                class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
+              >
+                <i class="fas fa-user-friends text-xl"></i>
+              </div>
+              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                24시 긴급 고객센터 상시 운영중!
+              </h3>
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+              >
+                365일 24시 긴급 고객센터를 운영중입니다. 전화 1544-1209 혹은 아래 문의하기 버튼을 클릭해주세요.
+              </p>
+              <p
+                class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
+              >
+
+              </p>
+              <a
+                href="/add/"
+                class="bg-red-400 text-black font-bold px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mt-3"
+                >문의하기</a
+              >
+            </div>
+            <div class="w-auto px-4 mr-auto ml-auto">
+
+                <img
+                  alt="..."
+                  src="{% static 'image/2.png' %}"
+                  class="w-full align-middle rounded-t-lg"
+                />
+
+                  <h4 class="text-xl font-bold ">
+                    1544-1209
+                  </h4>
+                  <p class="text-md font-light mt-2 ">
+                    친절하게 상담해 드립니다.
+
+                  </p>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative py-20">
+
+        <div class="container mx-auto px-4">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <img
+                alt="..."
+                class="max-w-full rounded-lg shadow-lg"
+                src="{% static 'image/3.png' %}"
+              />
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12">
+                <div
+                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
+                >
+                  <i class="fas fa-rocket text-xl"></i>
+                </div>
+                <h3 class="text-3xl font-semibold">끊임없이 발전하는 회사</h3>
+                <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                  저희 회사는 일반 주택 시설관리를 시작으로 대규모 복합몰에 이르기까지 국내 모든 업종의 배관 관리업무를 수행하며 많은 기술과 노하우를 축적하였습니다.
+                  현장별 맞춤 공법으로 고객만족 100%를 실현할 수 있도록 노력하겠습니다.
+                </p>
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          ><i class="fas fa-fingerprint"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">
+                          숙련된 전문 기술자의 점검
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          ><i class="fab fa-html5"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">다양한 시공관리</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          ><i class="far fa-paper-plane"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">차별화된 관리 프로세스</h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-20 pb-48">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center text-center mb-24">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold">최근 현장시공 사례</h2>
+              <p class="text-lg leading-relaxed m-4 text-gray-600">
+                최근 현장 시공사례입니다.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="{% static 'image/4.png' %}"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">고압세척</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    서울시 중구
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-twitter"></i></button
+                    ><button
+                      class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-facebook-f"></i></button
+                    ><button
+                      class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-dribbble"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="{% static 'image/5.png' %}"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">와이어 통수<h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    서울시 서초
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-google"></i></button
+                    ><button
+                      class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="{% static 'image/6.png' %}"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">준설</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    서울 도봉
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-google"></i></button
+                    ><button
+                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-twitter"></i></button
+                    ><button
+                      class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="{% static 'image/7.jpg' %}"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">배관공사 / 해빙</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    서울시 중구
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-dribbble"></i></button
+                    ><button
+                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-google"></i></button
+                    ><button
+                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-twitter"></i></button
+                    ><button
+                      class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0px);"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">소셜 미디어 공유하기!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-gray-700">
+              다른 소셜 미디어를 통해 문의하셔도 됩니다!
+            </h5>
+            <div class="mt-6">
+              <button
+                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-twitter"></i></button
+              ><button
+                class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-facebook-square"></i></button
+              ><button
+                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-dribbble"></i></button
+              ><button
+                class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <i class="flex fab fa-github"></i>
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >오시는 길</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >대표자명 : 김동철</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >주소 : 강원도 ....</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >이용약관</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >전화번호 010-000-0000</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2020 by
+              <a
+                href="https://www.creative-tim.com"
+                class="text-gray-600 hover:text-gray-900"
+                ></a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+	</script>
 </html>
-
