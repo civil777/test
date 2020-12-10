@@ -47,97 +47,7 @@
   </header>
   <body class="text-gray-800 antialiased">
   {% include "partials/messages.html" %}
-    <nav
-      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
-    >
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-      >
-        <div
-          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
-        >
-          <a
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
-	    href="{% url 'homes:index' %}"
-            >82clean</a
-          ><button
-            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-            type="button"
-            onclick="toggleNavbar('example-collapse-navbar')"
-          >
-            <i class="text-white fas fa-bars"></i>
-          </button>
-        </div>
-        <div
-          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
-          id="example-collapse-navbar"
-        >
-          <ul class="flex flex-col lg:flex-row list-none mr-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="/add/"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
-                ></i>
-                견적 문의하기 1544-1209</a
-              >
-            </li>
-          </ul>
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block ">회사소개</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">운영관리</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">사업영역</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">현장사례</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <button
-                class="bg-white lg:hidden text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-                type="button"
-                style="transition: all 0.15s ease 0s;"
-              >
-                <i class="fas fa-arrow-alt-circle-down"></i> 추가메뉴2
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include "partials/nav.html" %}
     <main>
 
 
@@ -163,7 +73,7 @@
         </div>
         <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
           <div class="flex flex-wrap text-center justify-center">
-            <div class="w-full lg:w-6/12 px-4">
+            <div class="w-full lg:w-6/12 px-4 mt-24">
               <h2 class="text-4xl font-semibold text-white">고객센터 / 견적문의</h2>
               <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
                 이름, 연락처와 함께 문의 내용을 보내주시면 친절히 답변해 드립니다.
