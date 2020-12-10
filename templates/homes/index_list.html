@@ -58,148 +58,19 @@
   </header>
   <body class=" ">
   {% include "partials/messages.html" %}
-    <nav
-      class="top-0 fixed z-50 w-full bg-white shadow-xl flex flex-wrap items-center lg:justify-center px-2 sm:py-2 md:py-2 lg:py-6 navbar-expand-lg "
-    >
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-center"
-      >
-        <div
-          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-center"
-        >
-          <a
-            class="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase "
-	    href="{% url 'homes:index' %}"
-            >82clean</a>
-          <button
-            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-            type="button"
-            onclick="toggleNavbar('example-collapse-navbar')"
-          >
-            <i class=" fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-      <div></div>
-      <div class="lg:absolute lg:mt-24">
-        <div
-          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden justify-center"
-          id="example-collapse-navbar"
-        >
-
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto ">
-            <li class="flex items-center">
-              <a
-                class=" lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class=" fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block ">회사소개</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">운영관리</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">사업영역</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="#"
-                ><i
-                  class="fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">현장사례</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="/add/"
-                ><i
-                  class="fab text-lg leading-lg "
-                ></i
-                ><span class="inline-block">고객문의</span></a
-              >
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-<style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    .swiper-container {
-      width: 100%;
-      height: 50%;
-      top: 20px;
+  {% include "partials/nav.html" %}
 
 
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-  </style>
 
 </head>
 
 <body>
-  <div class="swiper-container w-full h-full m-auto">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide h-full bg-auto text-center text-white" style='background-image: url("{% static 'image/1.jpg' %}");'>배관관리 전문기업 82clean</div>
-			<div class="swiper-slide bg-cover text-center text-white" style='background-image: url("{% static 'image/9.jpg' %}");'>82clean의 홈페이지 입니다 </div>
-			<div class="swiper-slide text-center text-white" style='background-image: url("{% static 'image/11.jpg' %}");'>철저한 고객관리 숙련된 전문가 82clean 입니다</div>
-
-		</div>
-		<!-- Add Pagination -->
-		<div class="swiper-pagination"></div>
-		<!-- Add Arrows -->
-
-	</div>
+<div class="py-20">
 
 
+</div>
 
-
-
+{% include "partials/slider.html" %}
 
 
 
@@ -250,106 +121,10 @@
 
 
 
+      <section class="relative items-center">
 
-
-
-
-
-
-
-<!--
-  <div class="p-16">
-    <div class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 m-5 mb-10">
-
-
-            <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
-        <div class="m-2 text-justify text-sm">
-            <p class="text-right text-xs">May 17, 2020</p>
-            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
-            <p class="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-        </div>
-        <div class="w-full text-right mt-4">
-          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
-        </div>
-    </div>
-          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
-        <div class="m-2 text-justify text-sm">
-            <p class="text-right text-xs">May 17, 2020</p>
-            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
-            <p class="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-        </div>
-        <div class="w-full text-right mt-4">
-          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
-        </div>
-    </div>
-          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
-        <div class="m-2 text-justify text-sm">
-            <p class="text-right text-xs">May 17, 2020</p>
-            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
-            <p class="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-        </div>
-        <div class="w-full text-right mt-4">
-          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
-        </div>
-    </div>
-          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
-        <div class="m-2 text-justify text-sm">
-            <p class="text-right text-xs">May 17, 2020</p>
-            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
-            <p class="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-        </div>
-        <div class="w-full text-right mt-4">
-          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
-        </div>
-    </div>
-          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
-        <div class="m-2 text-justify text-sm">
-            <p class="text-right text-xs">May 17, 2020</p>
-            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
-            <p class="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-        </div>
-        <div class="w-full text-right mt-4">
-          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
-        </div>
-    </div>
-          <div class="bg-white overflow-hidden hover:bg-green-100 border border-gray-200 p-3">
-        <div class="m-2 text-justify text-sm">
-            <p class="text-right text-xs">May 17, 2020</p>
-            <h2 class="font-bold text-lg h-2 mb-8">Blog Post Title </h2>
-            <p class="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-        </div>
-        <div class="w-full text-right mt-4">
-          <a class="text-green-400 uppercase font-bold text-sm" href="#">Read More</a>
-        </div>
-    </div>
-
-    </div>
-  </div>
-
--->
-
-      <section class="">
-
-          <div class="flex flex-wrap items-center mt-32">
-            <div class="w-1/2 md:w-5/12 px-4 ml-auto">
+          <div class="flex flex-wrap items-center mt-20 justify-center">
+            <div class="w-1/2 md:w-5/12 px-4">
               <div
                 class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
               >
@@ -370,11 +145,11 @@
               </p>
               <a
                 href="/add/"
-                class="bg-red-400 text-black font-bold px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mt-3"
+                class="bg-red-400 text-black font-bold px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mt-2"
                 >문의하기</a
               >
             </div>
-            <div class="w-auto px-4 mr-auto ml-auto">
+            <div class="w-auto ">
 
                 <img
                   alt="..."

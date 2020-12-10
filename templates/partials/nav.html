@@ -1,0 +1,86 @@
+{% load static %}
+<nav
+      class="top-0 fixed z-50 w-full bg-white shadow-xl flex flex-wrap items-center lg:justify-center px-2 sm:py-2 md:py-2 lg:py-12 navbar-expand-lg "
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-center"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-center"
+        >
+          <a
+            class="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase "
+	    href="{% url 'homes:index' %}"
+            >82clean</a>
+          <button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class=" fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:absolute lg:mt-32">
+        <div
+          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden justify-center"
+          id="example-collapse-navbar"
+        >
+
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto ">
+            <li class="flex items-center">
+              <a
+                class=" lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class=" fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block ">회사소개</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">운영관리</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">제품 / 기술</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="#"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">현장 사례</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:hover:text-gray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="/add/"
+                ><i
+                  class="fab text-lg leading-lg "
+                ></i
+                ><span class="inline-block">견적 문의</span></a
+              >
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
