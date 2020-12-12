@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{% static 'css/a_styles.css' %}">
     <title>{% block page_title %}{% endblock page_title %}| 82clean</title>
   </head>
+  <header>
+    {% include "partials/headernav.html" %}
+  </header>
   <body class="text-gray-800 mt-24 font-light h-screen w-full">
     {% include "partials/messages.html" %}
     {% include "partials/nav.html" %}
