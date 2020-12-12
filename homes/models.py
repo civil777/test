@@ -16,4 +16,19 @@ class Index(models.Model):
     text = models.TextField(default="")
 
 class Test(models.Model):
-    text = models.TextField(default="")
+    pass
+
+class T1(models.Model):
+    pass
+
+class T2(models.Model):
+    pass
+
+class T3(models.Model):
+    pass
+
+class T4(models.Model):
+    pass
+
+class T5(models.Model):
+    pass
