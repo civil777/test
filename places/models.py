@@ -53,13 +53,20 @@ class Room(core_models.TimeStampedModel):
         except ValueError:
             return None
 
+    def second_photo(self):
+        try:
+            photoss, = self.photos.all()[1:2]
+            return photoss.file.url
+        except ValueError:
+            return None
+
     def get_next_four_photos(self):
-        photos = self.photos.all()[1:5]
+        photos = self.photos.all()[1:4]
         return photos
 
     def all_product(self):
-        product, = self.photos.all()
-        return product.file.url
+        products = self.photos.all()[4:]
+        return products
 
 
 

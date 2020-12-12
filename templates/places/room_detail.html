@@ -6,62 +6,30 @@
 
 {% block content %}
 
-    <div class="container mt-64 max-w-full h-full flex mb-20">
-        <div class="h-full w-1/2 bg-center bg-cover" style="background-image:url({{room.first_photo}})"></div>
-        <div class="h-full w-1/2 flex flex-wrap">
-            {% for photo in room.get_next_four_photos %}
-                <div style="background-image:url({{product.file.url}})" class="w-1/2 h-auto bg-cover bg-center border-gray-700 border"></div>
-            {% endfor %}
-        </div>
-    </div>
 
+{% include 'partials/imagegrid.html' %}
     <div class="container mx-auto flex justify-around pb-56">
         <div class="w-1/2">
             <div class="flex justify-between">
                 <div class="mb-5">
                     <h4 class="text-3xl font-medium mb-px">{{room.name}}</h4>
                 </div>
-                <a href="{{room.host.get_absolute_url}}" class="flex flex-col items-center">
-                    <span class="mt-2 text-gray-500">{{room.host.name}}</span>
+                <a class="flex flex-col items-center">
+                    <span class="mt-2 ">시공 담당자 : {{room.host.username}}</span>
                 </a>
             </div>
-          	    <div class="flex border-section">
-                <span class="mr-5 font-light">{{room.item_type}}</span>
+            <div class="flex border-section">
+
+                <span class="mr-5 font-light">사용 공법 및 기술 : {{room.item_type}}</span>
             </div>
+            <h4 class="font-medium text-lg mb-5">상세 설명 및 특이사항 :</h4>
             <p class="border-section">
+
                 {{room.description}}
             </p>
-            <div class="border-section">
-                <h4 class="font-medium text-lg mb-5">상세 설명</h4>
-            </div>
-            <div class="border-section">
-                <h4 class="font-medium text-lg mb-5">Facilities</h4>
-                        </div>
-            <div class="border-section">
-                <h4 class="font-medium text-lg mb-5"> Rules</h4>
-                         </div>
-            <div class="mt-10">
-                <h4 class="font-medium text-2xl mb-5">특이사항</h4>
-                <div class="flex items-center">
-
-                    <div class="h-4 w-px bg-gray-400 mx-5"></div>
-
-                </div>
-                <div class="mt-10">
-
-                        <div class="border-section">
-                            <div class="mb-3 flex">
-
-                                <div class="flex flex-col ml-5">
 
 
-                                </div>
-                            </div>
 
-                        </div>
-
-                </div>
-            </div>
         </div>
         <div class="w-1/3">
 
