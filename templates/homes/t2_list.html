@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base1.html" %}
 {% load static %}
 
 {% block page_title %}
@@ -12,12 +12,12 @@
 {% block content %}
 
 
-  <div class="container pb-20 mx-auto h-full ">
+  <div class="container pb-20 mx-auto  ">
 
     <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat" style="background-image:url({% static 'image/9.jpg' %})" >
       <h5>82clean </h5>
     </div>
       <h5 class="text-3xl text-center">#공법종류 - 와이어 통수 </h5>
-
+{% include "partials/footer.html" %}
   </div>
 {% endblock content %}
