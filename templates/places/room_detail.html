@@ -9,20 +9,22 @@
 
 {% include 'partials/imagegrid.html' %}
     <div class="container mx-auto flex justify-around pb-56">
-        <div class="w-1/2">
+        <div class="w-2/3 ml-3">
             <div class="flex justify-between">
                 <div class="mb-5">
                     <h4 class="text-3xl font-medium mb-px">{{room.name}}</h4>
                 </div>
-                <a class="flex flex-col items-center">
-                    <span class="mt-2 ">시공 담당자 : {{room.host.username}}</span>
-                </a>
+
+            </div>
+            <div class="flex border-section ">
+
+                <span class="mt-2 ">담당자 : {{room.host.username}}</span>
             </div>
             <div class="flex border-section">
 
-                <span class="mr-5 font-light">사용 공법 및 기술 : {{room.item_type}}</span>
+                <span class=" font-light">공법 종류 : {{room.item_type}}</span>
             </div>
-            <h4 class="font-medium text-lg mb-5">상세 설명 :</h4>
+            <h4 class="font-medium text-lg">상세 설명 :</h4>
             <p class="border-section">
 
                 {{room.description}}
