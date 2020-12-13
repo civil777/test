@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.views import generic
-from . models import Question, Index, Test, T1, T2, T3, T4, T5
+from . models import Question, Index, Test, T1, T2, T3, T4, T5, Q1, Q2, W1, W2
 from django.urls import reverse_lazy
 from . forms import NameForm
 from django.contrib.messages.views import SuccessMessageMixin
@@ -27,6 +27,21 @@ class T4View(generic.ListView):
 class T5View(generic.ListView):
     model = T5
     template_name = 't5_list.html'
+
+class Q1View(generic.ListView):
+    model = Q1
+    template_name = 'q1_list.html'
+
+class Q2View(generic.ListView):
+    model = Q2
+    template_name = 'q2_list.html'
+
+class W1View(generic.ListView):
+    model = W1
+    template_name = 'w1_list.html'
+class W2View(generic.ListView):
+    model = W2
+    template_name = 'w2_list.html'
 
 class IndexView(generic.ListView):
     model = Index

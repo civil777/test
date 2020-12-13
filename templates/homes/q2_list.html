@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+  현장사례
+{% endblock %}
+{% block nav1 %}
+
+            {% include "partials/sidenav12.html" %}
+
+{% endblock %}
+{% block content %}
+
+
+  <div class="container pb-20 mx-auto h-full ">
+
+    <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat" style="background-image:url({% static 'image/bg2.jpg' %})" >
+      <h5>82clean </h5>
+    </div>
+      <h5 class="text-3xl text-center">#회사소개 - 오시는 길 </h5>
+
+  </div>
+{% endblock content %}

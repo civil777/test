@@ -32,3 +32,14 @@ class T4(models.Model):
 
 class T5(models.Model):
     pass
+
+class Q1(models.Model):
+    pass
+
+class Q2(models.Model):
+    pass
+
+class W1(models.Model):
+    pass
+class W2(models.Model):
+    pass
