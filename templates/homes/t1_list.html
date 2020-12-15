@@ -6,7 +6,7 @@
 {% endblock %}
 {% block nav1 %}
 
-            {% include "partials/sidenav1.html" %}
+
 
 {% endblock %}
 {% block content %}
@@ -18,10 +18,14 @@
       <h5>82clean </h5>
     </div>
       <h5 class="text-3xl text-center"> </h5>
+      <div class="grid grid-cols-6 gap-4">
+<div>
+        {% include "partials/sidenav1.html" %}
+</div>
 
-
-    <img class="w-full h-full" src="{% static 'image/a/4.jpg' %}"/>
-
+       <div class="col-end-7 col-span-5 "><img class="col-span-2" src="{% static 'image/a/4.jpg' %}"/>
+       </div>
+       </div>
 {% include "partials/footer.html" %}
   </div>
 
