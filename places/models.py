@@ -37,7 +37,7 @@ class Room(core_models.TimeStampedModel):
     host = models.ForeignKey("users.User", related_name="places", on_delete=models.CASCADE,  verbose_name='담당자')
     
     time = models.DateField()
-    item_type = models.ForeignKey("RoomType", related_name="places", on_delete=models.SET_NULL, null=True,  verbose_name='공법종류')
+
 
     def __str__(self):
         return self.name

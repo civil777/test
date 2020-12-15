@@ -15,10 +15,8 @@ class RoomAdmin(admin.ModelAdmin):
     inlines = (PhotoInline,)
 
     list_display = (
-        "name", "item_type",
+        "name",
     )
-    list_filter = ("item_type", )
-
     seaerch_fields = ("name", "^host__username",)
 
     raw_id_fields = ("host",)
