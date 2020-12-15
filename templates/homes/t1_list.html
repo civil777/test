@@ -17,14 +17,24 @@
     <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat" style="background-image:url({% static 'image/9.jpg' %})" >
       <h5>82clean </h5>
     </div>
+      <img class="" src="{% static 'image/a/p11.JPG' %}"/>
       <h5 class="text-3xl text-center"> </h5>
       <div class="grid grid-cols-6 gap-4">
-<div>
-        {% include "partials/sidenav1.html" %}
+<div class="col-start-1 col-span-2">
+<img class="" src="{% static 'image/a/p1.JPG' %}"/>
 </div>
 
-       <div class="col-end-7 col-span-5 "><img class="col-span-2" src="{% static 'image/a/4.jpg' %}"/>
+
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p1.png' %})" onclick="location.href='/a1/';">
        </div>
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p2.png' %})" onclick="location.href='/a1/';">
+       </div>
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p3.png' %})" onclick="location.href='/a1/';">
+       </div>
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p4.png' %})" onclick="location.href='/a1/';">
+       </div>
+
+
        </div>
 {% include "partials/footer.html" %}
   </div>
