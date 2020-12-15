@@ -6,7 +6,7 @@
 {% endblock %}
 {% block nav1 %}
 
-            {% include "partials/sidenav112.html" %}
+
 
 {% endblock %}
 {% block content %}
@@ -17,8 +17,17 @@
     <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat" style="background-image:url({% static 'image/11.jpg' %})" >
       <h5>82clean </h5>
     </div>
-      <h5 class="text-3xl text-center"></h5>
-    <img class="w-full h-full" src="{% static 'image/a/3.jpg' %}"/>
-{% include "partials/footer.html" %}
   </div>
+    <div class="mt-2 grid grid-cols-6 gap-4">
+        <div>
+             {% include "partials/sidenav112.html" %}
+        </div>
+        <div class="col-end-7 col-span-5">
+    <img class="w-full h-full" src="{% static 'image/a/3.jpg' %}"/>
+        </div>
+      </div>
+
+
+{% include "partials/footer.html" %}
+
 {% endblock content %}

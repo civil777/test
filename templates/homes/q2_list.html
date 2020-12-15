@@ -2,24 +2,33 @@
 {% load static %}
 
 {% block page_title %}
-  현장사례
+  회사소개
 {% endblock %}
 {% block nav1 %}
 
-            {% include "partials/sidenav12.html" %}
+
 
 {% endblock %}
 {% block content %}
 
 
-  <div class="container pb-20 mx-auto ">
+  <div class="container pb-20 mt-2 mx-auto ">
 
     <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat mb-4" style="background-image:url({% static 'image/bg2.jpg' %})" >
       <h5>82clean </h5>
     </div>
-      <h5 class="text-3xl text-center"> 오시는 길 </h5>
-
-    <img class="w-full h-full mt-4" src="{% static 'image/a/map.png' %}"/>
-{% include "partials/footer.html" %}
   </div>
+    <div class="mt-2 grid grid-cols-6 gap-4">
+        <div>
+             {% include "partials/sidenav12.html" %}
+        </div>
+        <div class="col-end-7 col-span-5">
+    <img class="w-full h-full" src="{% static 'image/a/map.png' %}"/>
+        </div>
+      </div>
+
+
+
+{% include "partials/footer.html" %}
+
 {% endblock content %}
