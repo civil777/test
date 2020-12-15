@@ -30,14 +30,14 @@ class Photo(core_models.TimeStampedModel):
 class Room(core_models.TimeStampedModel):
     """ Room Model Definition """
 
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    price = models.IntegerField()
-    address = models.CharField(max_length=140)
-    host = models.ForeignKey("users.User", related_name="places", on_delete=models.CASCADE)
-    special_item = models.BooleanField(default=False)
-    time = models.TimeField()
-    item_type = models.ForeignKey("RoomType", related_name="places", on_delete=models.SET_NULL, null=True)
+    name = models.CharField(max_length=100, verbose_name='제목')
+    description = models.TextField(verbose_name='상세설명', default="", null=True)
+
+    address = models.CharField(max_length=140,  verbose_name='주소')
+    host = models.ForeignKey("users.User", related_name="places", on_delete=models.CASCADE,  verbose_name='담당자')
+    
+    time = models.DateField()
+    item_type = models.ForeignKey("RoomType", related_name="places", on_delete=models.SET_NULL, null=True,  verbose_name='공법종류')
 
     def __str__(self):
         return self.name
@@ -68,5 +68,7 @@ class Room(core_models.TimeStampedModel):
         products = self.photos.all()[4:]
         return products
 
-
+    class Meta:
+        verbose_name = '현장사례'
+        verbose_name_plural = '현장사례'
 

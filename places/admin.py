@@ -2,9 +2,7 @@ from django.contrib import admin
 from . import models
 from django.utils.html import mark_safe
 
-@admin.register(models.RoomType)
-class ItemAdmin(admin.ModelAdmin):
-    pass
+
 
 class PhotoInline(admin.TabularInline):
 
@@ -17,13 +15,11 @@ class RoomAdmin(admin.ModelAdmin):
     inlines = (PhotoInline,)
 
     list_display = (
-        "name", "price", "item_type", "special_item",
+        "name", "item_type",
     )
-    list_filter = ("item_type", "special_item",)
+    list_filter = ("item_type", )
 
     seaerch_fields = ("name", "^host__username",)
-
-    ordering = ("name", "price", )
 
     raw_id_fields = ("host",)
 
