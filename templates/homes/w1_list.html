@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_title %}
-  현장사례
+  운영관리
 {% endblock %}
 {% block nav1 %}
 
@@ -12,20 +12,18 @@
 {% block content %}
 
 
-  <div class="container pb-20 mx-auto  ">
+  <div class="container mt-32 mx-auto max-w-7xl">
 
-    <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat" style="background-image:url({% static 'image/11.jpg' %})" >
-      <h5>82clean </h5>
-    </div>
-      </div>
-    <div class="mt-2 grid grid-cols-6 gap-4">
+
+       <div class="xl:grid xl:grid-cols-6 xl:gap-4">
         <div>
              {% include "partials/sidenav111.html" %}
         </div>
         <div class="col-end-7 col-span-5">
-    <img class="w-full h-full" src="{% static 'image/a/2.jpg' %}"/>
+    <img class="w-full h-auto" src="{% static 'image/a/2.jpg' %}"/>
         </div>
       </div>
+  </div>
 
 
 {% include "partials/footer.html" %}
