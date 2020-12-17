@@ -1,23 +1,105 @@
-{% extends "testbase.html" %}
 {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-{% block page_title %}
-  현장사례
-{% endblock %}
-{% block nav1 %}
-
-            {% include "partials/sidenav111.html" %}
-
-{% endblock %}
-{% block content %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
 
-  <div class="container pb-20 mx-auto ">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <div class="w-full rounded-xl pb-20 lg:mt-48 text-center text-white text-sm font-sans bg-cover bg-no-repeat" style="background-image:url({% static 'image/9.jpg' %})" >
-      <h5>82clean </h5>
-    </div>
-      <h5 class="text-3xl text-center">#운영관리 - 일반 접수 </h5>
-{% include "partials/footer.html" %}
-  </div>
-{% endblock content %}
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" />
+    <link rel="image_src" href="{% static 'image/1.jpg' %}" />
+    <meta name="description" content="배관관리 전문기업 82clena의 홈페이지 입니다." />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="{% static 'assets/img/apple-icon.png' %}"
+    />
+     <link
+      rel="stylesheet"
+      href="{% static 'css/styles.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/a_styles.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+    <title>배관관리 전문기업 82clean의 홈페이지 입니다.</title>
+  </head>
+  <header>
+
+  </header>
+  <body class=" ">
+
+  {% include "partials/testnav1.html" %}
+
+{% include "partials/messages.html" %}
+
+</head>
+
+<body>
+
+
+{% include "partials/slider.html" %}
+
+
+
+
+
+
+    {% include "partials/indexmain.html" %}
+{% for room1 in homes %}
+    {% include "partials/indexplace.html" %}
+{% endfor %}
+  </body>
+
+
+  {% include "partials/footer.html" %}
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      effect: 'fade',
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+	</script>
+</html>

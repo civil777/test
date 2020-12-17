@@ -14,6 +14,42 @@ class Question(core_models.TimeStampedModel):
         verbose_name = '문의사항'
         verbose_name_plural = '문의사항'
 
+class Photo1(core_models.TimeStampedModel):
+    """ Photo Model Definition"""
+
+    files = models.ImageField(upload_to="product_photos1")
+    places = models.ForeignKey('Rooma', related_name="home", on_delete=models.CASCADE)
+
+class Rooma(core_models.TimeStampedModel):
+    """ Room Model Definition """
+
+    name = models.CharField(max_length=100, verbose_name='제목')
+
+    address = models.CharField(max_length=140, verbose_name='주소')
+
+    host = models.ForeignKey("users.User", related_name="home", on_delete=models.CASCADE, verbose_name='담당자')
+
+    def __str__(self):
+        return self.name
+
+    def first_photo(self):
+        try:
+            photo, = self.home.all()[:1]
+            return photo.files.url
+        except ValueError:
+            return None
+
+    class Meta:
+        verbose_name = '메인화면 현장사례'
+        verbose_name_plural = '메인화면 현장사례'
+
+
+
+
+
+
+
+
 
 
 class Index(models.Model):

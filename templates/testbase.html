@@ -8,28 +8,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/a_styles.css' %}">
+
     <title>{% block page_title %}{% endblock page_title %}| 82clean</title>
   </head>
   <header>
-    {% include "partials/headernav.html" %}
+
     {% block nav1 %} {% endblock nav1 %}
   </header>
-  <body class="text-gray-800 mt-24 font-light h-screen w-full">
-    {% include "partials/messages.html" %}
-    {% include "partials/testnav.html" %}
+  <body class="">
+
+
     {{ STATIC_URL }}
 
     {% block content %}{% endblock %}
-    {% include "partials/footer.html" %}
+
 
   </body>
-<script>
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("block");
-    }
-  </script>
+
 </html>

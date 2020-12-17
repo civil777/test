@@ -1,0 +1,48 @@
+
+
+
+        <!-- Column -->
+        <div class="my-1 px-1 w-full ">
+
+            <!-- Article -->
+            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                <a href="/place/">
+                <div class="w-full h-64 rounded-lg mb-2 bg-cover bg-center" style="background-image: url({{room1.first_photo}});"></div>
+
+
+    </a>
+
+                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                    <h1 class="text-lg">
+                        <a class="no-underline hover:underline text-black" href="/place/">
+                        {{room1.name}}
+                        </a>
+                    </h1>
+                    <p class="text-grey-darker text-sm">
+
+                    </p>
+                </header>
+
+                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                    <a class="flex items-center no-underline hover:underline text-black" href="/place/">
+
+                        <p class="ml-2 text-sm">
+                        {{room1.address}}
+                        </p>
+                    </a>
+                    <a class="no-underline text-grey-darker hover:text-red-dark" href="/place/">
+                        <span >담당자 : {{room1.host.username}}</span>
+
+                    </a>
+                </footer>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+
+
+
