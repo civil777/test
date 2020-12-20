@@ -43,6 +43,9 @@ class W1View(generic.ListView):
 class W2View(generic.ListView):
     model = W2
     template_name = 'w2_list.html'
+class NaverView(generic.ListView):
+    model = W2
+    template_name = 'navera8e96fadc9fb10ede2d47018716d41fd.html'
 
 class IndexView(generic.ListView):
     model = Rooma

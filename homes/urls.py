@@ -5,6 +5,7 @@ app_name = 'homes'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    path('navera8e96fadc9fb10ede2d47018716d41fd/', views.IndexView.as_view(), name='index'),
     path('test/', views.TestView.as_view(), name='test'),
     path('add/', views.QuestionView.as_view(), name='question'),
     path('g1/', views.T1View.as_view(), name='t1'),
