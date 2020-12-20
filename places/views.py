@@ -10,7 +10,7 @@ class HomeView(ListView):
     model = models.Room
     paginate_by = 8
 
-    ordering = "created"
+    ordering = "-created"
     context_object_name = "places"
 
 
