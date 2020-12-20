@@ -83,3 +83,5 @@ class W1(models.Model):
     pass
 class W2(models.Model):
     pass
+class Naver(models.Model):
+    pass
