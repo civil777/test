@@ -1,105 +1,58 @@
+{% extends "base1.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Cache-Control" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-	<!-- Link Swiper's CSS -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" />
-    <link rel="image_src" href="{% static 'image/1.jpg' %}" />
-    <meta name="description" content="배관관리 전문기업 82clena의 홈페이지 입니다." />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="{% static 'assets/img/apple-icon.png' %}"
-    />
-     <link
-      rel="stylesheet"
-      href="{% static 'css/styles.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static 'css/a_styles.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static 'assets/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
-    />
-    <title>배관관리 전문기업 82clean의 홈페이지 입니다.</title>
-  </head>
-  <header>
-
-  </header>
-  <body class=" ">
-
-  {% include "partials/testnav1.html" %}
-
-{% include "partials/messages.html" %}
-
-</head>
-
-<body>
-
-
-{% include "partials/slider.html" %}
+{% block page_title %}
+  공법종류
+{% endblock %}
+{% block nav1 %}
 
 
 
+{% endblock %}
+{% block content %}
 
 
-
-    {% include "partials/indexmain.html" %}
-{% for room1 in homes %}
-    {% include "partials/indexplace.html" %}
-{% endfor %}
-  </body>
+  <div class="container mx-auto md:mt-32">
 
 
-  {% include "partials/footer.html" %}
-  <script>
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("block");
-    }
-  </script>
+      <img class="" src="{% static 'image/b/a1.png' %}" style="height:50px;"/>
+      <h5 class="text-3xl text-center"> </h5>
+      <div class="grid grid-cols-6 gap-4">
+<div class="col-start-1 col-span-2">
+  <div class="ml-8 grid grid-cols-1 gap-1">
+    <div class="border-b-4 border-blue-600 font-sans text-4xl font-black tracking-wider leading-relaxed"># 공법 &middot; 기술 </div>
+    <div class="text-blue-600 italic text-2xl font-black mb-2"> SERVICE </div>
+    <a class="underline text-xl font-bold hover:underline" href="/g1/"> 고압세척 (내시경 촬영 가능) </a>
+    <a class="text-xl hover:underline" href="/g1/"> 와이어 통수 </a>
+    <a class="text-xl hover:underline" href="/g1/"> 준설 </a>
+    <a class="text-xl hover:underline border-b-4 border-blue-600 " href="/g1/"> 배관 보수 / 신설  </a>
+    <div class="text-blue-600 italic text-2xl font-black mb-2"> TECHNIQUE </div>
+    <div class="mt-2 mb-2 font-bold text-xl mb-4"> 배관 내 슬러지 90% 이상 세척 &middot; 제거  </div>
+      <p class="text-gray-600 text-lg"> <span class="font-bold text-black">와이어 통수가 불가능 </span>하거나,</p>
+      <p class="text-gray-600 text-lg"> 막힘 주기가 <span class="font-bold text-black">짧고, </span></p>
+      <p class="text-gray-600 text-lg"> <span class="font-bold text-black">지속적인 문제가 발생</span>하는 현장에 적합</p>
+      <p class="text-gray-600 text-lg">기름  <span class="font-bold text-black mb-2">슬러지 제거와 악취</span>에도 효과</p>
+      <p class="text-gray-600 text-lg"> 배관의 노후, 파손 이탈 등 <span class="font-bold text-black">사고예방 가능</span></p>
+      <p class="text-gray-600 text-lg"> 주기적인 배관 관리를 시행할 경우,</p>
+      <p class="text-gray-600 text-lg mb-4"> <span class="underline font-bold text-black">배관 수명 연장</span>에 좋은 공법</p>
 
-	<!-- Swiper JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </div>
 
-	<!-- Initialize Swiper -->
-	<script>
-		var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      effect: 'fade',
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-	</script>
-</html>
+</div>
+
+
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p1.png' %})" onclick="location.href='/g1/';">
+       </div>
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p2.png' %})" onclick="location.href='/g2/';">
+       </div>
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p3.png' %})" onclick="location.href='/g3/';">
+       </div>
+          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p4.png' %})" onclick="location.href='/g5/';">
+       </div>
+
+
+       </div>
+
+  </div>
+
+{% endblock content %}

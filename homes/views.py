@@ -9,7 +9,7 @@ from django.contrib import messages
 
 
 class TestView(generic.ListView):
-    model = Rooma
+    model = Test
     template_name = 'test_list.html'
     context_object_name = "homes"
 
