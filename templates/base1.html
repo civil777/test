@@ -19,8 +19,9 @@
     {% block nav1 %} {% endblock nav1 %}
   </header>
   <body class="text-gray-800 font-light h-screen w-full font-sans">
-    {% include "partials/messages.html" %}
+
     {% include "partials/testnav1.html" %}
+    {% include "partials/messages.html" %}
     {{ STATIC_URL }}
 
     {% block content %}{% endblock %}
