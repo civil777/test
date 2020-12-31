@@ -1,12 +1,69 @@
-from django.shortcuts import render
+from django.utils import timezone
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.views import generic
-from . models import Question, Index, Test, T1, T2, T3, T4, T5, Q1, Q2, W1, W2, Rooma, Naver
+from . models import Question, Index, Test, T1, T2, T3, T4, T5, Q1, Q2, W1, W2, Rooma, Naver, Jquestion
 from django.urls import reverse_lazy
-from . forms import NameForm
+from . forms import NameForm, QuestionForm, AnswerForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 
+
+class JqView(generic.ListView):
+
+    """ HomeView Definition """
+
+    model = Jquestion
+    paginate_by = 10
+
+    ordering = "-created"
+    context_object_name = "jquestion_list"
+
+def jqview(request):
+    jquestion_list = Jquestion.objects.order_by('-created')
+    context = {'jquestion_list': jquestion_list}
+    return render(request, 'homes/jquestion_list.html', context)
+
+def detail(request, question_id):
+    question = Jquestion.objects.get(id=question_id)
+    context = {'question': question}
+    return render(request, 'homes/jquestion_detail.html', context)
+
+def answer_create(request, question_id):
+
+    question = get_object_or_404(Jquestion, pk=question_id)
+    question.answer_set.create(content=request.POST.get('content'), create_date=timezone.now())
+
+def question_create(request):
+
+    if request.method == 'POST':
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            question = form.save(commit=False)
+            question.create_date = timezone.now()
+            question.save()
+            return redirect('homes:jq')
+    else:
+        form = QuestionForm()
+    context = {'form': form}
+    return render(request, 'homes/jquestion_form.html', context)
+
+def answer_create(request, question_id):
+
+    question = get_object_or_404(Jquestion, pk=question_id)
+    if request.method == 'POST':
+        form = AnswerForm(request.POST)
+        if form.is_valid():
+            answer = form.save(commit=False)
+            answer.create_date = timezone.now()
+            answer.question = question
+            answer.save()
+            return redirect('homes:detail', question_id=question_id)
+
+        else:
+            form = AnswerForm()
+        context = {'question': question, 'form': form}
+        return render(request, 'homes/jquestion_detail.html', context)
 
 class TestView(generic.ListView):
     model = Test
