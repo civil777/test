@@ -18,7 +18,7 @@ class Photo1(core_models.TimeStampedModel):
     """ Photo Model Definition"""
 
     files = models.ImageField(upload_to="product_photos1")
-    places = models.ForeignKey('Rooma', related_name="home", on_delete=models.CASCADE)
+    places = models.ForeignKey('Rooma', related_name="home  ", on_delete=models.CASCADE, blank=True, null=True)
 
 
 class Rooma(core_models.TimeStampedModel):
