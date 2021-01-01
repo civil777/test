@@ -19,5 +19,5 @@ class RoomAdmin(admin.ModelAdmin):
         "name",
     )
 
-    raw_id_fields = ("host",)
+
 
