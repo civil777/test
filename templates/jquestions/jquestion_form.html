@@ -4,14 +4,14 @@
 
 {% block content %}
 
-<div class="container">
-    <h5 class="my-3 border-bottom pb-2">질문등록</h5>
+<div class="container mx-auto">
+    <h2 class="my-3 border-b pb-2 text-xl">질문등록</h2>
     <form method="post" class="post-form my-3">
         {% csrf_token %}
         <!-- -------------------------------------- [edit] -------------------------------------- -->
         <!-- 오류표시 Start -->
         {% if form.errors %}
-            <div class="alert alert-danger" role="alert">
+            <div class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1" role="alert">
             {% for field in form %}
                 {% if field.errors %}
                 <strong>{{ field.label }}</strong>
@@ -23,7 +23,7 @@
         <!-- 오류표시 End -->
         <div class="form-group">
             <label for="subject">제목</label>
-            <input type="text" class="form-control" name="subject" id="subject"
+            <input type="text" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-500 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="제목" name="subject" id="subject"
                    value="{{ form.subject.value|default_if_none:'' }}">
         </div>
         <div class="form-group">
@@ -37,7 +37,7 @@
                       id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
         <!-- ------------------------------------------------------------------------------------ -->
-        <button type="submit" class="btn btn-primary">저장하기</button>
+        <button type="submit" class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-blue-500 rounded-full shadow ripple hover:shadow-lg hover:bg-blue-700 focus:outline-none font-black text-md">저장하기</button>
     </form>
 </div>
 {% endblock %}
