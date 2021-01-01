@@ -28,7 +28,7 @@ class Rooma(core_models.TimeStampedModel):
 
     address = models.CharField(max_length=140, verbose_name='주소')
 
-    host = models.ForeignKey("users.User", related_name="home", on_delete=models.CASCADE, verbose_name='담당자', blank=True, null=True)
+
 
     def __str__(self):
         return self.name
