@@ -21,23 +21,23 @@
             </div>
         {% endif %}
         <!-- 오류표시 End -->
-        <div class="form-group">
-            <label for="subject">제목</label>
-            <input type="text" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-500 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="제목" name="subject" id="subject"
+        <div class="my-4">
+            <label for="subject" class="font-semibold">제목</label>
+            <input type="text" class="border-2 border-blue-500" name="subject" id="subject"
                    value="{{ form.subject.value|default_if_none:'' }}">
         </div>
-        <div class="form-group">
-            <label for="nickname">닉네임</label>
-            <input type="text" class="form-control" name="nickname" id="nickname"
+        <div class="my-4">
+            <label for="nickname" class="font-semibold">닉네임</label>
+            <input type="text" class="border-2 border-blue-500" name="nickname" id="nickname"
                    value="{{ form.subject.value|default_if_none:'' }}">
         </div>
-        <div class="form-group">
-            <label for="content">내용</label>
-            <textarea class="form-control" name="content"
+        <div class="my-4">
+            <label for="content" class="font-semibold">내용</label>
+            <textarea class="border-2 border-blue-500" name="content"
                       id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
         <!-- ------------------------------------------------------------------------------------ -->
-        <button type="submit" class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-blue-500 rounded-full shadow ripple hover:shadow-lg hover:bg-blue-700 focus:outline-none font-black text-md">저장하기</button>
+        <button type="submit" class="transform hover:scale-110 motion-reduce:transform-none inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-blue-500 rounded-full shadow ripple hover:shadow-lg hover:bg-blue-700 focus:outline-none font-black text-md">저장하기</button>
     </form>
 </div>
 {% endblock %}
