@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homes.urls')),
     path('place/', include('places.urls', namespace="places")),
+    path('jquestion/', include('jquestions.urls', namespace="jquestions")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -21,12 +21,3 @@ class RoomAdmin(admin.ModelAdmin):
 
     raw_id_fields = ("host",)
 
-@admin.register(models.Jquestion)
-class JquAdmin(admin.ModelAdmin):
-
-    list_display = ("subject", "created", )
-
-@admin.register(models.Answer)
-class JanswerAdmin(admin.ModelAdmin):
-
-    list_display = ("question", "create_date", "content", )

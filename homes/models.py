@@ -45,20 +45,6 @@ class Rooma(core_models.TimeStampedModel):
         verbose_name_plural = '메인화면 현장사례'
 
 
-class Jquestion(core_models.TimeStampedModel):
-    subject = models.CharField(max_length=20)
-    content = models.TextField()
-
-
-    def __str__(self):
-        return self.subject
-
-
-class Answer(models.Model):
-    question = models.ForeignKey(Jquestion, on_delete=models.CASCADE)
-    content = models.TextField()
-    create_date = models.DateTimeField()
-
 
 class Index(models.Model):
     text = models.TextField(default="")

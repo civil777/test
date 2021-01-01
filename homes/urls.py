@@ -7,12 +7,8 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('navera8e96fadc9fb10ede2d47018716d41fd.html/', views.NaverView.as_view(), name='naver'),
     path('test/', views.TestView.as_view(), name='test'),
-    path('jq1/', views.jqview, name='jq1'),
-    path('jq/<int:question_id>/', views.detail, name='detail'),
-    path('answer/create/<int:question_id>/', views.answer_create, name='answer_create'),
-    path('question/create/', views.question_create, name='question_create'),
     path('add/', views.QuestionView.as_view(), name='question'),
-    path('jq/', views.JqView.as_view(), name='jq'),
+
     path('g1/', views.T1View.as_view(), name='t1'),
     path('g2/', views.T2View.as_view(), name='t2'),
     path('g3/', views.T3View.as_view(), name='t3'),
