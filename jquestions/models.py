@@ -3,7 +3,7 @@ from core import models as core_models
 
 
 class Jquestion(core_models.TimeStampedModel):
-    subject = models.CharField(max_length=20)
+    subject = models.CharField(max_length=60)
     content = models.TextField()
     nickname = models.CharField(max_length=20)
 
