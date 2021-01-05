@@ -1,18 +1,18 @@
 <!-- animation -->
-
-<section class="p-10 min-h-screen flex md:flex-row items-center justify-around flex-wrap sm:flex-col">
+{% load static %}
+<section class="flex mt-4 items-center justify-center md:grid md:grid-cols-6 md:gap-20 justify-items-center">
 
 
 
   <!-- scale -->
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
+  <div class="h-32 w-32 relative cursor-pointer mb-5" onclick="location.href='/a1'">
 
     <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
     <div class="absolute inset-0 transform  hover:scale-75 transition duration-300">
 
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+      <div class="h-full w-full bg-white rounded-lg shadow-2xl bg-auto bg-no-repeat bg-center" style="background-image: url({% static 'svg/hw.svg' %});"><div class="w-full h-full"></div><h1 class="text-center font-black mt-1">회사소개</h1></div>
 
     </div>
 
@@ -22,13 +22,13 @@
 
   <!-- roatate and scale -->
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
+  <div class="h-32 w-32 relative cursor-pointer mb-5" onclick="location.href='/b1'">
 
     <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
     <div class="absolute inset-0 transform hover:rotate-90 hover:scale-75 transition duration-300">
 
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+      <div class="h-full w-full bg-white rounded-lg shadow-2xl bg-auto bg-no-repeat bg-center" style="background-image: url({% static 'svg/hw1.svg' %});"><div class="w-full h-full"></div><h1 class="text-center font-black mt-1">운영관리</h1></div>
 
     </div>
 
@@ -38,13 +38,13 @@
 
   <!-- rotate -->
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
+  <div class="h-32 w-32 relative cursor-pointer mb-5" onclick="location.href='/g1'">
 
     <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
     <div class="absolute inset-0 transform  hover:rotate-45 transition duration-300">
 
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+      <div class="h-full w-full bg-white rounded-lg shadow-2xl bg-auto bg-no-repeat bg-center" style="background-image: url({% static 'svg/hw2.svg' %});"><div class="w-full h-full"></div><h1 class="text-center font-black mt-1">공법종류</h1></div>
 
     </div>
 
@@ -54,13 +54,13 @@
 
   <!-- rotate minus -->
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
+  <div class="h-32 w-32 relative cursor-pointer mb-5" onclick="location.href='/place'">
 
     <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
     <div class="absolute inset-0 transform  hover:-rotate-45 transition duration-300">
 
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+      <div class="h-full w-full bg-white rounded-lg shadow-2xl bg-auto bg-no-repeat bg-center" style="background-image: url({% static 'svg/hw3.svg' %});"><div class="w-full h-full"></div><h1 class="text-center font-black mt-1">현장사례</h1></div>
 
     </div>
 
@@ -70,13 +70,13 @@
 
   <!-- Origin -->
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
+  <div class="h-32 w-32 relative cursor-pointer mb-5" onclick="location.href='/add'">
 
     <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
     <div class="absolute inset-0 transform origin-left hover:-rotate-45 transition duration-300">
 
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+      <div class="h-full w-full bg-white rounded-lg shadow-2xl bg-auto bg-no-repeat bg-center" style="background-image: url({% static 'svg/hw4.svg' %});"><div class="w-full h-full"></div><h1 class="text-center font-black mt-1">견적문의</h1></div>
 
     </div>
 
@@ -86,13 +86,13 @@
 
   <!-- translate -->
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
+  <div class="h-32 w-32 relative cursor-pointer mb-5" onclick="location.href='/jquestion/jq'">
 
     <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
     <div class="absolute inset-0 transform hover:-translate-x-10 transition duration-300">
 
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+      <div class="h-full w-full bg-white rounded-lg shadow-2xl bg-auto bg-no-repeat bg-center" style="background-image: url({% static 'svg/hw5.svg' %});"><div class="w-full h-full"></div><h1 class="text-center font-black mt-1">질문/답변</h1></div>
 
     </div>
 
@@ -100,35 +100,8 @@
 
 
 
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
-
-    <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
 
 
-
-    <div class="absolute inset-0 transform hover:rotate-90 hover:translate-x-full hover:scale-150 transition duration-300">
-
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- skew -->
-
-  <div class="h-32 w-32 relative cursor-pointer mb-5">
-
-    <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
-
-    <div class="absolute inset-0 transform hover:skew-y-12 transition duration-300">
-
-      <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
-
-    </div>
-
-  </div>
 
 
 

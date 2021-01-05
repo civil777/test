@@ -13,46 +13,7 @@
 
 
   <div class="container mx-auto md:mt-32">
-
-
-      <img class="" src="{% static 'image/b/a1.png' %}" style="height:50px;"/>
-      <h5 class="text-3xl text-center"> </h5>
-      <div class="grid grid-cols-6 gap-4">
-<div class="col-start-1 col-span-2">
-  <div class="ml-8 grid grid-cols-1 gap-1">
-    <div class="border-b-4 border-blue-600 font-sans text-4xl font-black tracking-wider leading-relaxed"># 공법 &middot; 기술 </div>
-    <div class="text-blue-600 italic text-2xl font-black mb-2"> SERVICE </div>
-    <a class="underline text-xl font-bold hover:underline" href="/g1/"> 고압세척 (내시경 촬영 가능) </a>
-    <a class="text-xl hover:underline" href="/g1/"> 와이어 통수 </a>
-    <a class="text-xl hover:underline" href="/g1/"> 준설 </a>
-    <a class="text-xl hover:underline border-b-4 border-blue-600 " href="/g1/"> 배관 보수 / 신설  </a>
-    <div class="text-blue-600 italic text-2xl font-black mb-2"> TECHNIQUE </div>
-    <div class="mt-2 mb-2 font-bold text-xl mb-4"> 배관 내 슬러지 90% 이상 세척 &middot; 제거  </div>
-      <p class="text-gray-600 text-lg"> <span class="font-bold text-black">와이어 통수가 불가능 </span>하거나,</p>
-      <p class="text-gray-600 text-lg"> 막힘 주기가 <span class="font-bold text-black">짧고, </span></p>
-      <p class="text-gray-600 text-lg"> <span class="font-bold text-black">지속적인 문제가 발생</span>하는 현장에 적합</p>
-      <p class="text-gray-600 text-lg">기름  <span class="font-bold text-black mb-2">슬러지 제거와 악취</span>에도 효과</p>
-      <p class="text-gray-600 text-lg"> 배관의 노후, 파손 이탈 등 <span class="font-bold text-black">사고예방 가능</span></p>
-      <p class="text-gray-600 text-lg"> 주기적인 배관 관리를 시행할 경우,</p>
-      <p class="text-gray-600 text-lg mb-4"> <span class="underline font-bold text-black">배관 수명 연장</span>에 좋은 공법</p>
-
-  </div>
-
-</div>
-
-
-          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p1.png' %})" onclick="location.href='/g1/';">
-       </div>
-          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p2.png' %})" onclick="location.href='/g2/';">
-       </div>
-          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p3.png' %})" onclick="location.href='/g3/';">
-       </div>
-          <div class="h-auto w-full bg-center bg-cover bg-no-repeat" style="cursor: pointer; background-image:url({% static 'image/b/p4.png' %})" onclick="location.href='/g5/';">
-       </div>
-
-
-       </div>
-
+{% include 'partials/ani.html' %}
   </div>
 
 {% endblock content %}
