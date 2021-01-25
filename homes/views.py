@@ -53,6 +53,14 @@ class Naver1View(generic.ListView):
     model = Naver
     template_name = 'naverc9ad0d400160eac802e73eabe87309e9.html'
 
+class RobotView(generic.ListView):
+    model = Naver
+    template_name = 'robots.txt'
+
+class SiteView(generic.ListView):
+    model = Naver
+    template_name = 'sitemap.xml'
+
 class IndexView(generic.ListView):
     model = Rooma
     template_name = 'index_list.html'

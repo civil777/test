@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://82clean.com/sitemap.xml
