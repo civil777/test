@@ -49,6 +49,10 @@ class NaverView(generic.ListView):
     model = Naver
     template_name = 'navera8e96fadc9fb10ede2d47018716d41fd.html'
 
+class Naver1View(generic.ListView):
+    model = Naver
+    template_name = 'naverc9ad0d400160eac802e73eabe87309e9.html'
+
 class IndexView(generic.ListView):
     model = Rooma
     template_name = 'index_list.html'

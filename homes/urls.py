@@ -8,6 +8,7 @@ urlpatterns = [
     path('navera8e96fadc9fb10ede2d47018716d41fd.html/', views.NaverView.as_view(), name='naver'),
     path('test/', views.TestView.as_view(), name='test'),
     path('add/', views.QuestionView.as_view(), name='question'),
+    path('naverc9ad0d400160eac802e73eabe87309e9.html/', views.Naver1View.as_view(), name='naver1'),
 
     path('g1/', views.T1View.as_view(), name='t1'),
     path('g2/', views.T2View.as_view(), name='t2'),
