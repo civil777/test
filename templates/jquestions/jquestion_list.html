@@ -75,15 +75,15 @@
             <td class="px-6 py-4 whitespace-nowrap text-center">
                 {{ forloop.counter }}
             </td>
-            <td>
+            <td class="overflow-ellipsis overflow-hidden">
                 {{ jquestion.subject }}
             </td>
-            <td class="text-center"> {{ jquestion.nickname }}</td>
-            <td class="text-center">{% if jquestion.answer_set.count > 0 %}
-                    <span class="inline-flex px-2 text-xs font-semibold leading-5 text-red-600 bg-red-100 rounded-full">{{ jquestion.answer_set.count }}개의 답변이 등록되었습니다!</span>
+            <td class="text-center overflow-ellipsis overflow-hidden"> {{ jquestion.nickname }}</td>
+            <td class="text-center overflow-ellipsis overflow-hidden">{% if jquestion.answer_set.count > 0 %}
+                    <span class="inline-flex px-2 text-xs font-semibold leading-5 text-red-600 bg-red-100 rounded-full overflow-ellipsis overflow-hidden">{{ jquestion.answer_set.count }}개의 답변이 등록되었습니다!</span>
                     {% endif %}
             </td>
-            <td class="text-center">{{ jquestion.created }}</td>
+            <td class="text-center overflow-ellipsis overflow-hidden">{{ jquestion.created }}</td>
         </tr>
 
         {% endfor %}
